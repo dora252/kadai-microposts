@@ -10,4 +10,12 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    
+    public function counts($user){
+        $count_micropsts = $user->microposts()->count();
+        
+        return [
+            'count_microposts' => $count_micropsts,
+            ];
+    }
 }

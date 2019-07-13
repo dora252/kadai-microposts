@@ -3,10 +3,10 @@
 @section('content')
     @if (Auth::check())
         <div class="row">
-            <aside class="col-sm-4">
+            <aside class="col-xs-4">
                 @include('users.card', ['user' => Auth::user()])
             </aside>
-            <div class="col-sm-8">
+            <div class="col-xs-8">
                 @if (Auth::id() == $user->id)
                     {!! Form::open(['route' => 'microposts.store']) !!}
                         <div class="form-group">
@@ -20,7 +20,6 @@
                 @endif
             </div>
         </div>
-        
     @else
         <div class="center jumbotron">
             <div class="text-center">

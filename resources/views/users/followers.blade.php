@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="row">
-        <aside class="col-sm-4">
+        <aside class="col-xs-4">
             @include('users.card', ['user' => $user])
         </aside>
-        <div class="col-sm-8">
+        <div class="col-xs-8">
             @include('users.navtabs', ['user' => $user])
             @include('users.users', ['users' => $users])
         </div>

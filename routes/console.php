@@ -16,6 +16,3 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
-
-Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
-Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');
